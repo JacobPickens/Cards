@@ -9,6 +9,8 @@ public class Main {
 	public Main() {
 		deck = new Deck(10);
 		
+		deck.shuffle();
+		
 		for(int i = 0; i < deck.getDeckSize(); i++) {
 			System.out.println(deck.getCard(i).getInfo());
 		}

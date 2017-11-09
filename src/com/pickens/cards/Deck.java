@@ -1,6 +1,8 @@
 package com.pickens.cards;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
@@ -14,8 +16,12 @@ public class Deck {
 		cards = new ArrayList<Card>();
 		
 		for(int i = 0; i < deckSize; i++) {
-			cards.add(new Card(this, i, i));
+			cards.add(new Card(this, i+1, i));
 		}
+	}
+	
+	public void shuffle() {
+		Collections.shuffle(cards);
 	}
 	
 	public Card getCard(int index) {
